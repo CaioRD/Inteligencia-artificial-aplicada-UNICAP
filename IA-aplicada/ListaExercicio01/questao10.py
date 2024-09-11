@@ -11,26 +11,18 @@
 
 def calcula_imc():
     try:
-        # Solicita o peso e a altura do usuário
         peso = float(input("Digite o peso em kg: "))
         altura = float(input("Digite a altura em metros (ex: 1.75): "))
-    except ValueError:
-        # Caso o usuário insira valores inválidos
+    except ValueError:       
         print("Peso ou altura inválidos. Por favor, digite números válidos.")
         return
-
-    # Verifica se os valores são positivos
+   
     if peso <= 0 or altura <= 0:
         print("Peso ou altura inválidos. Ambos devem ser maiores que zero.")
         return
-
-    # Calcula o IMC
     imc = peso / (altura ** 2)
-    
-    # Exibe o IMC calculado
     print(f"Seu IMC é: {imc:.2f}")
 
-    # Determina a condição de acordo com o IMC
     if imc < 18.5:
         print("Condição: Abaixo do peso")
     elif 18.5 <= imc < 25:
@@ -40,5 +32,5 @@ def calcula_imc():
     else:
         print("Condição: Obeso")
 
-# Chama a função para calcular o IMC
+
 calcula_imc()

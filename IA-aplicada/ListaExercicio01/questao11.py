@@ -34,16 +34,16 @@ def calcula_preco():
             continue
 
         if condicao_pagamento == 1:
-            preco_final = preco_etiqueta * 0.90  # 10% de desconto
+            preco_final = preco_etiqueta * 0.90  
             descricao = "à vista em dinheiro ou cheque, com 10% de desconto"
         elif condicao_pagamento == 2:
-            preco_final = preco_etiqueta * 0.85  # 15% de desconto
+            preco_final = preco_etiqueta * 0.85  
             descricao = "à vista no cartão de crédito, com 15% de desconto"
         elif condicao_pagamento == 3:
-            preco_final = preco_etiqueta  # Preço normal
+            preco_final = preco_etiqueta  
             descricao = "em duas vezes, preço normal de etiqueta sem juros"
         elif condicao_pagamento == 4:
-            preco_final = preco_etiqueta * 1.10  # 10% de juros
+            preco_final = preco_etiqueta * 1.10  
             descricao = "em duas vezes, preço normal de etiqueta mais juros de 10%"
         elif condicao_pagamento == 5:
             print("Saindo do programa.")
@@ -54,5 +54,5 @@ def calcula_preco():
 
         print(f"O valor a ser pago pelo produto é: R$ {preco_final:.2f} ({descricao}).")
 
-# Chama a função para calcular o preço
+
 calcula_preco()
